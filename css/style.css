@@ -1,0 +1,357 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif ;
+    display: grid;
+    height: 100vh;
+    width: 100vw;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: 5% 10% 30% 50% 5%;
+    overflow-x: hidden;
+}
+
+header {
+    background-color: white;
+    grid-column: 1 / 13;
+    grid-row: 1 / 2;
+}
+
+.logo {
+    max-width: 250px;
+    position: absolute;
+    top: 5px;
+    left: 5px;
+}
+
+.slicknav_menu {
+    position: absolute;
+    top: 60px;
+    right: 10px;
+    border-radius: 20px;
+    background: transparent;
+}
+
+.slicknav_menu li {
+    margin: 5px;
+    text-align: center;
+    background-color: black;
+    text-transform: uppercase;
+    border-radius: 10px;
+}
+
+.slicknav_menu a:hover {
+    background: transparent;
+}
+
+.menu {
+    display: none;
+}
+
+address {
+    top: 7px;
+    right: 3px;
+    position: absolute;
+    font-size: 25px;
+}
+
+address a {
+    color: rgb(40, 167, 235);
+    margin: 0.5px;
+}
+
+address a:hover {
+    color: rgb(0, 0, 0);
+}
+
+nav {
+    background-color: lightskyblue;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+    grid-column: 1 / 13;
+    grid-row: 2 / 3;
+}
+
+nav ul li {
+    display: inline;
+    margin: 1vw;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+nav ul li a {
+    list-style-type: none;
+    text-decoration: none;
+    color: black;
+    padding: 10px;
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 15px;
+}
+
+nav ul li a:hover {
+    background-color: rgb(255, 255, 255);
+}
+
+h1, h2 {
+    color: rgb(245, 245, 245);
+    font-size: 6.5vw;
+    margin: 10px;
+    -webkit-text-stroke: 2px rgb(49, 49, 49);
+    text-shadow: 3px 5px 10px rgb(0, 0, 0);
+}
+
+h3 {
+    text-align: center;
+    margin: 10px;
+}
+
+button {
+    padding: 10px;
+    border-radius: 10px;
+    opacity: 0.8;
+}
+
+button, .bi-forward {
+    font-size: 15px;
+}
+
+button:hover {
+    background-color: gray;
+    color: white;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-column: 1 / 13;
+    grid-row: 3 / 4;
+    background: url(Background.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    border: 1px solid black;
+    border-radius: 50px;
+    margin-top: 1px;
+}
+
+aside {
+    background-color: white;
+    grid-column: 1 / 13;
+    grid-row: 4 / 5;
+    padding: 25px;
+}
+
+aside p {
+    text-align: justify;
+    font-size: .9rem;
+}
+
+footer {
+    grid-column: 1 / 13;
+    grid-row: 5 / 6;
+    margin-top: 11em;
+}
+
+footer ul {
+    background-color: lightskyblue;
+}
+
+.footer--container ul {
+    margin: 30px;
+    padding: 10px;
+    border: 1px solid black;
+    list-style-type: none;
+    text-align: center;
+    line-height: 30px;
+}
+
+.footer--container a, footer a{
+    text-decoration: none;
+    color: black;
+}
+
+.footer--container a:hover, footer a:hover{
+    color: gray;
+    text-shadow: 1px 1px 3px white;
+}
+
+.footer--container ul li {
+    font-size: 15px;
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.footer-paragraph {
+    text-align: center;
+    margin: 5px;
+}
+
+/* tablet media query here */
+
+@media screen and (min-width:600px) and (max-width:992px) {
+    body {
+        grid-template-rows: 10% 10% 70% 10%;
+    }
+
+    .slicknav_menu {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    h1, h2 {
+        color: rgb(245, 245, 245);
+        font-size: 4vw;
+        margin: 10px;
+        -webkit-text-stroke: 2px rgb(49, 49, 49);
+        text-shadow: 3px 5px 10px rgb(0, 0, 0);
+    }
+
+    .logo {
+        max-width: 250px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    
+    address {
+        top: 25px;
+        right: 30px;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    address a {
+        color: rgb(40, 167, 235);
+        margin: 10px;
+    }
+
+    section {
+        grid-column: 1 / 9;
+        grid-row: 3 / 4;
+        height: auto;
+        width: auto;
+        margin-top: 100px;
+        margin-left: 10px;
+    }
+
+    aside {
+        grid-column: 9 / 13;
+        grid-row: 3 / 4;
+        padding: 10px;
+        margin-right: 20px;
+    }
+
+    aside p {
+        font-size: 1.9vw;
+    }
+
+    footer {
+        grid-column: 1 / 13;
+        grid-row: 4 / 6;
+        margin-top: 200px;
+    }
+
+    footer ul {
+        background-color: lightskyblue;
+    }
+
+}
+
+/* desktop media query here */
+
+@media screen and (min-width:992px) {
+    body {
+        grid-template-rows: 10% 10% 70% 10%;
+        height: 100vh;
+    }
+
+    .slicknav_menu {
+        display: none;
+    }
+
+    .menu {
+        display: block;
+    }
+
+    h1, h2 {
+        color: rgb(245, 245, 245);
+        font-size: 3.5vw;
+        margin: 30px;
+        -webkit-text-stroke: 3px rgb(49, 49, 49);
+        text-shadow: 3px 5px 10px rgb(0, 0, 0);
+    }
+
+    header {
+        grid-column: 1 / 13;
+        grid-row: 1 / 2;
+    }
+
+    .logo {
+        max-width: 250px;
+        position: absolute;
+        top: 25px;
+        left: 25px;
+    }
+    
+    address {
+        top: 25px;
+        right: 30px;
+        position: absolute;
+        font-size: 25px;
+    }
+
+    address a {
+        color: rgb(40, 167, 235);
+        margin: 10px;
+    }
+
+    nav {
+        grid-column: 1 / 13;
+        grid-row: 2 / 3;
+    }
+
+    section {
+        grid-column: 1 / 10;
+        grid-row: 3 / 4;
+        margin-top: 10px;
+    }
+
+    aside {
+        grid-column: 10 / 13;
+        grid-row: 3 / 4;
+        padding-right: 60px;
+    }
+
+    footer {
+        grid-column: 1 / 13;
+        grid-row: 4 / 6;
+        border: 1px solid black;
+        background-color: lightblue;
+        margin-top: 20px;
+    }
+
+    .footer--container {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    .footer--container ul {
+        margin: 30px;
+        border: 1px solid black;
+        list-style-type: none;
+        text-align: center;
+        line-height: 30px;
+    }
+}
